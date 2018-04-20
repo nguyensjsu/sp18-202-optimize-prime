@@ -12,10 +12,12 @@ public class Thanos extends Actor
      * Act - do whatever the Thanos wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+     private int counter = 0;
     public void act() 
     {
         // Add your action code here.
         keymove();
+        createBomb();
     }    
     public void keymove()
     {
@@ -38,5 +40,29 @@ public class Thanos extends Actor
             this.setLocation(getX(),getY()+8);
         
     }
+    
+    
 }
+
+ public void createBomb()
+    {
+      
+       AmmoFactory ammoFactory= new AmmoFactory();       
+          if(counter == 0)
+          {
+             if (Greenfoot.isKeyDown("space"))
+             {
+                Ammunation bullet = ammoFactory.getAmmunition("Bullet");
+                getWorld().addObject(bullet,getX(),getY()-80);
+                counter = 50;
+             }
+             
+             
+          }
+          else
+          {
+             counter--;  
+          }
+       
+   }
 }
