@@ -25,7 +25,7 @@ public class AmmoFactory extends Actor
          return new Bullet();
          
       } else if(ammoType.equalsIgnoreCase("Laser")){
-        
+          return new Laser();
         }
          
          return null;
