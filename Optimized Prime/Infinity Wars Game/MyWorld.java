@@ -14,6 +14,10 @@ public class MyWorld extends World
     private GameState og;
     private GameState pg;
     private GameState go;
+    private int lives;
+    private int score;
+    private int speed;
+    private int laser;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,6 +29,15 @@ public class MyWorld extends World
         setPaintOrder(Information.class,StartScreen.class);
         addObject(new Thanos(),280,370);
         addObject(new StartScreen(),400,300);
+        
+        lives = 3;
+        laser = 2;
+        speed = 48;
+        //pause = false;
+        og = new OngoingGame();
+        pg = new PauseGame();
+        go = new GameOver();
+        
          st = og;
     }
      public void act()
@@ -61,6 +74,27 @@ public class MyWorld extends World
     public GameState getGameOverState()
     {
         return this.go;
+    }
+    
+     public int getScore()
+    {
+       return score;
+    }
+    public void addScore(int scoreToAdd)
+    {
+       score += scoreToAdd;
+    }
+    
+    public int getSpeed()
+    {
+       return speed;
+    }
+    public void addSpeed(int newSpeed)
+    {
+        speed += newSpeed;
+    }
+    public void setSpeed(int finalSpeed){
+        speed=finalSpeed;
     }
     
 }
