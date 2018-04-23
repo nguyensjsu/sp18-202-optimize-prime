@@ -96,5 +96,13 @@ public class MyWorld extends World
     public void setSpeed(int finalSpeed){
         speed=finalSpeed;
     }
+     public void setLives()
+    {
+        lives--;
+    }
+    public int getLives()
+    {
+       return lives;
+    }
     
 }
