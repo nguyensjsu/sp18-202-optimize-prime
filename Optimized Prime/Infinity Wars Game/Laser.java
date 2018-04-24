@@ -17,7 +17,7 @@ public class Laser extends Ammunation
     public Laser()
     {
         GreenfootImage image=getImage();
-        image.scale(500,10);
+        image.scale(800,5);
      
     }
    

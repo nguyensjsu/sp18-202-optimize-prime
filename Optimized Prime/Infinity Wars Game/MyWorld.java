@@ -18,6 +18,7 @@ public class MyWorld extends World
     private int score;
     private int speed;
     private int laser;
+    private ConcreteSubject subject;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,9 +26,9 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        setPaintOrder(Information.class,StartScreen.class);
-        addObject(new Thanos(),280,370);
+        super(800, 600, 1); 
+        setPaintOrder(Information.class,StartScreen.class,Score.class);
+        addObject(new Thanos(),400,550);
         addObject(new StartScreen(),400,300);
         
         lives = 3;
@@ -38,7 +39,18 @@ public class MyWorld extends World
         pg = new PauseGame();
         go = new GameOver();
         
-         st = og;
+         st = og;   
+           subject = new ConcreteSubject();
+            addObject(new StartScreen(),400,300);
+        addObject(subject, 400, 400);
+           
+        Score score = new Score("Score: ");
+        subject.attach(score);
+        addObject(score,85,580);
+         
+        addObject(new Lives(),50,50);
+        addObject(new Lives(),100,50);
+        addObject(new Lives(),150,50);
     }
      public void act()
     {
