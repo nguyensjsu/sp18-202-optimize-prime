@@ -41,12 +41,31 @@ public class Score extends Observer
     {
         GreenfootImage image = getImage();
         image.clear();
+        
+        image.setColor(Color.WHITE);
+        
+            
         image.drawString(text + target, 1, 18);
     }
     
     //this will help us to show updated score
     public void update(){
+         ArrayList<ConcreteSubject> listOfSubs = (ArrayList<ConcreteSubject>)(((MyWorld)getWorld()).getObjects(ConcreteSubject.class));
+        if(listOfSubs.size()>0){
+              subject = listOfSubs.get(0);
+        }
         
+        if(text.equalsIgnoreCase("Score: ")){
+            if (subject != null)
+            target = subject.getScore();
+        }
+      
+       if(value > target)
+       {
+          value = 0;
+         // updateImage();
+       }
+       updateImage();
       
     }  
 }

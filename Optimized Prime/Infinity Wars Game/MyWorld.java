@@ -27,8 +27,9 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
-        setPaintOrder(Information.class,StartScreen.class,Score.class);
-        addObject(new Thanos(),400,550);
+        
+         setPaintOrder(Information.class,StartScreen.class, Score.class, Blocker.class, Lives.class);
+        
         addObject(new StartScreen(),400,300);
         
         lives = 3;
@@ -40,10 +41,14 @@ public class MyWorld extends World
         go = new GameOver();
         
          st = og;   
+               
            subject = new ConcreteSubject();
             addObject(new StartScreen(),400,300);
         addObject(subject, 400, 400);
            
+        
+        addObject(new Thanos(),400,550);
+        
         Score score = new Score("Score: ");
         subject.attach(score);
         addObject(score,85,580);
@@ -51,11 +56,15 @@ public class MyWorld extends World
         addObject(new Lives(),50,50);
         addObject(new Lives(),100,50);
         addObject(new Lives(),150,50);
+        
+        
+        Component vehicle=new Blocker();
+        
     }
      public void act()
     {
       
-        
+          chanceToVehicle();
           chanceBackground();
        
     
@@ -116,5 +125,19 @@ public class MyWorld extends World
     {
        return lives;
     }
+      public void chanceToVehicle()
+    {
+       Component vehicle = new Blocker();
+       
+     
+       
+       if(Greenfoot.getRandomNumber(50)<1)
+       {
+          addObject(vehicle,175+Greenfoot.getRandomNumber(500), 0);
+          component.addChild(vehicle);
+       }
+    
+    }
     
 }
+
