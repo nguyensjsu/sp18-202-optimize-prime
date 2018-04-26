@@ -28,7 +28,7 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         
-         setPaintOrder(Information.class,StartScreen.class, Score.class, Blocker.class, Lives.class);
+         setPaintOrder(Information.class,StartScreen.class, Score.class,Thanos.class, Blocker.class, Lives.class);
         
         addObject(new StartScreen(),400,300);
         
@@ -41,7 +41,8 @@ public class MyWorld extends World
         go = new GameOver();
         
          st = og;   
-               
+                component = new Composite();
+                
            subject = new ConcreteSubject();
             addObject(new StartScreen(),400,300);
         addObject(subject, 400, 400);
