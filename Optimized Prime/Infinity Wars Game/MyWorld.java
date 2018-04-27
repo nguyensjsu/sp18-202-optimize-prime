@@ -67,10 +67,28 @@ public class MyWorld extends World
       
           chanceToVehicle();
           chanceBackground();
+          chanceToBonus();
        
     
     }
-    
+    public void chanceToBonus()
+    {
+       Component coin = new Coin();
+       //Component lifeSaver = new LifeSaver();
+      
+       if(fastFlag) {
+             coin.setFasterFlag();
+         //    lifeSaver.setFasterFlag();
+       }
+       
+        if(Greenfoot.getRandomNumber(50)<1)
+       {
+          addObject(coin,170+Greenfoot.getRandomNumber(500), 0);
+          component.addChild(coin);
+       }
+     
+   
+    }
     public void chanceBackground()
     {
       
