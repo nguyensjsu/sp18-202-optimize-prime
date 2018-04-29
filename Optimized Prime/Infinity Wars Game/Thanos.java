@@ -18,6 +18,12 @@ public class Thanos extends Actor
         // Add your action code here.
         keymove();
         createBomb();
+
+        Actor coin = getOneObjectAtOffset(0, 0, Coin.class);
+        if(coin != null)
+        {
+            ((MyWorld)getWorld()).removeObject(coin);
+        }
     }    
     public void keymove()
     {
@@ -50,13 +56,13 @@ public class Thanos extends Actor
        AmmoFactory ammoFactory= new AmmoFactory();       
           if(counter == 0)
           {
-             if (Greenfoot.isKeyDown("space"))
+             if (Greenfoot.isKeyDown("x"))
              {
                 Ammunation bullet = ammoFactory.getAmmunition("Bullet");
                 getWorld().addObject(bullet,getX(),getY()-80);
                 counter = 50;
              }
-              if (Greenfoot.isKeyDown("x"))
+              if (Greenfoot.isKeyDown("space"))
              {
                 Ammunation bullet = ammoFactory.getAmmunition("Laser");
                 getWorld().addObject(bullet,getX(),getY()-80);
