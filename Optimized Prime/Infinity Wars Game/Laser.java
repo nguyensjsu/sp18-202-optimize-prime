@@ -23,12 +23,11 @@ public class Laser extends Ammunation
    
     public void act() 
     {
-<<<<<<< HEAD
+
         //Actor blocker = getOneObjectAtOffset(0, 0, Blocker.class);
         Actor blocker = getOneIntersectingObject(Blocker.class);
-=======
-        Actor blocker = getOneObjectAtOffset(0, 0, Blocker.class);
->>>>>>> 32c314349306c73e29907acad2051bde29ee4266
+
+
         if(this != null && blocker != null)
         {
             ((MyWorld)getWorld()).removeObject(blocker);
