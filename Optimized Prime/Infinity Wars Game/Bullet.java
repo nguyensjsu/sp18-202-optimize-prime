@@ -38,7 +38,7 @@ public class Bullet extends Ammunation
     public void moveUp()
     {
    
-          setLocation(getX(), getY()-4);
+          setLocation(getX(), getY()-8);
      
     }
     public void check()

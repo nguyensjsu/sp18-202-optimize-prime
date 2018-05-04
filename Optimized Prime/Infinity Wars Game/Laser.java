@@ -42,7 +42,7 @@ public class Laser extends Ammunation
     public void moveUp()
     {
      
-          setLocation(getX(), getY()-4);
+          setLocation(getX(), getY()-5);
        
     }
     public void check()
