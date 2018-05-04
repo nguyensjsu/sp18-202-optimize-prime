@@ -21,10 +21,15 @@ public class Blocker extends Component
     public Blocker()
     {
        
-       image1 = new GreenfootImage("bomb.png");
-       image2 = new GreenfootImage("bomb.png");
-       image1.scale(150,150);  
-       image2.scale(100,100);  
+       image1 = new GreenfootImage("ironman.png");
+       image2 = new GreenfootImage("panther.png");
+       image3 = new GreenfootImage("rabbit.png");
+       image4 = new GreenfootImage("vision.png");
+       
+       image1.scale(90,90);  
+       image2.scale(90,90);  
+       image3.scale(90,90);
+       image4.scale(90,90);
        randomImage();
      //  setRotation(90);
     }
@@ -62,16 +67,24 @@ public class Blocker extends Component
     
     public void randomImage()
     {
-       if (Greenfoot.getRandomNumber(5)<2)
+       if (Greenfoot.getRandomNumber(5) > 3 && Greenfoot.getRandomNumber(5) <= 4)
        {
           setImage(image1);
        }
        
+       else if(Greenfoot.getRandomNumber(5) > 2 && Greenfoot.getRandomNumber(5) <= 3) 
+       {
+           setImage(image2);
+       }
+       else if(Greenfoot.getRandomNumber(5) > 1 && Greenfoot.getRandomNumber(5) <= 2) 
+       {
+           setImage(image3);           
+       }
        else
        {
-          setImage(image2);
+          setImage(image4);
        }
-    }
+   }
     public void check()
     {
         
