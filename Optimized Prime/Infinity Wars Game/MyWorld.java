@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -32,7 +32,7 @@ public class MyWorld extends World
         
         addObject(new StartScreen(),400,300);
         
-        lives = 3;
+        lives = 4;
         laser = 2;
         speed = 48;
         //pause = false;
@@ -53,10 +53,13 @@ public class MyWorld extends World
         Score score = new Score("Power: ");
         subject.attach(score);
         addObject(score,85,580);
-         
-        addObject(new Lives(),50,50);
-        addObject(new Lives(),100,50);
+        
+        
+         addObject(new Lives(),50,50);
+         addObject(new Lives(),100,50);
         addObject(new Lives(),150,50);
+        
+       
         
         
         Component vehicle=new Blocker();
@@ -149,7 +152,16 @@ public class MyWorld extends World
     }
     
     public void collided() {
-       this.lives--;
+       
+        this.lives--;
+          if(lives==0)
+        st=go;
+       List remove = getObjects( Lives.class );
+       
+        removeObject((Actor) remove.get(remove.size()-1));
+        
+      
+       
     }
       public void chanceToVehicle()
     {
@@ -163,12 +175,16 @@ public class MyWorld extends World
           component.addChild(vehicle);
        }
     
+    
     }
     public void incLives()
     {
-     
+       
+        addObject(new Lives(),50*lives,50);
         lives++;
-  
+     
+    
+      
         
     }
     
