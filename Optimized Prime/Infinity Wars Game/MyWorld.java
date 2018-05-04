@@ -50,7 +50,7 @@ public class MyWorld extends World
         
         addObject(new Thanos(),400,550);
         
-        Score score = new Score("Score: ");
+        Score score = new Score("Power: ");
         subject.attach(score);
         addObject(score,85,580);
          

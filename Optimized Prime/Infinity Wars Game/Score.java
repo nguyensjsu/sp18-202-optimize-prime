@@ -53,11 +53,13 @@ public class Score extends Observer
          ArrayList<ConcreteSubject> listOfSubs = (ArrayList<ConcreteSubject>)(((MyWorld)getWorld()).getObjects(ConcreteSubject.class));
         if(listOfSubs.size()>0){
               subject = listOfSubs.get(0);
+               
         }
         
-        if(text.equalsIgnoreCase("Score: ")){
+        if(text.equalsIgnoreCase("Power: ")){
             if (subject != null)
             target = subject.getScore();
+        
         }
       
        if(value > target)
