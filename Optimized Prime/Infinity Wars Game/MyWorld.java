@@ -144,6 +144,10 @@ public class MyWorld extends World
     {
        return lives;
     }
+    
+    public void collided() {
+       this.lives--;
+    }
       public void chanceToVehicle()
     {
        Component vehicle = new Blocker();

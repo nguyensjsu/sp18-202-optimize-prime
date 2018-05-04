@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class Thanos here.
  * 
@@ -12,18 +12,22 @@ public class Thanos extends Actor
      * Act - do whatever the Thanos wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-     private int counter = 0;
+    private int counter = 0;
+    private Actor collidedVehicle;
+    private Actor collidedCoin;
     public void act() 
     {
         // Add your action code here.
         keymove();
         createBomb();
-
+        checkCollision();
+        /*
         Actor coin = getOneObjectAtOffset(0, 0, Coin.class);
         if(coin != null)
         {
             ((MyWorld)getWorld()).removeObject(coin);
         }
+        */
     }    
     public void keymove()
     {
@@ -77,4 +81,22 @@ public class Thanos extends Actor
           }
        
    }
+   
+ public void checkCollision()
+    {
+        if(this.isTouching(Blocker.class)){
+            ArrayList<Blocker> list = (ArrayList<Blocker>)getObjectsAtOffset(5, 5, Blocker.class);
+            if(list.size()>0)
+                collidedVehicle = list.get(0);
+            else
+                 collidedVehicle = null;
+            
+            if (collidedVehicle != null)
+            {
+               getWorld().removeObject(collidedVehicle);
+               ((MyWorld) getWorld()).collided();
+               //Greenfoot.playSound("Explosion.wav");
+            }
+        }        
+    }   
 }
