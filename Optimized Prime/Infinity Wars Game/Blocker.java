@@ -56,12 +56,11 @@ public class Blocker extends Component
     }
     public void moveDown()
     {
-    //    if(((MyWorld) getWorld()).getState().toString() == "OnGoingGame")
-      // {
+        if(((MyWorld) getWorld()).getState().toString() == "OnGoingGame")
+        {
          
              setLocation(getX(), getY()+4);
- 
-       //}
+        }
     }
     
      public void moveFaster()

@@ -32,7 +32,7 @@ public class MyWorld extends World
         
         addObject(new StartScreen(),400,300);
         
-        lives = 4;
+        lives = 3;
         laser = 2;
         speed = 48;
         //pause = false;
@@ -67,11 +67,12 @@ public class MyWorld extends World
     }
      public void act()
     {
-      
+       if(st.toString() == "OnGoingGame")
+       {       
           chanceToVehicle();
           chanceBackground();
           chanceToBonus();
-       
+        }
     
     }
     public void chanceToBonus()
@@ -153,13 +154,17 @@ public class MyWorld extends World
     
     public void collided() {
        
-        this.lives--;
-          if(lives==0)
-        st=go;
+        lives--;
+       
+        
        List remove = getObjects( Lives.class );
        
         removeObject((Actor) remove.get(remove.size()-1));
-        
+          if(lives==0) {
+            st=go;
+            return;
+            }
+            
       
        
     }
@@ -180,12 +185,9 @@ public class MyWorld extends World
     public void incLives()
     {
        
-        addObject(new Lives(),50*lives,50);
         lives++;
-     
-    
-      
-        
+        addObject(new Lives(),50*lives,50);
+
     }
     
 }

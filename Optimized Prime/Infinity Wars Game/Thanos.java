@@ -30,6 +30,7 @@ public class Thanos extends Actor
         keymove();
         createBomb();
         checkCollision();
+        click();
         /*
         Actor coin = getOneObjectAtOffset(0, 0, Coin.class);
         if(coin != null)
@@ -151,5 +152,17 @@ public class Thanos extends Actor
               
             }
         }
-    }   
+    }
+    public void click()
+    {
+       if(Greenfoot.mouseClicked(null))
+       {
+          if(((MyWorld) getWorld()).getState().toString() == "OnGoingGame")
+          {
+             //((CarWorld) getWorld()).pauseGame(true);
+             ((MyWorld) getWorld()).setState(((MyWorld) getWorld()).getPauseState());
+             getWorld().addObject(new Information(),400,300);
+          }
+       }
+    }    
 }
