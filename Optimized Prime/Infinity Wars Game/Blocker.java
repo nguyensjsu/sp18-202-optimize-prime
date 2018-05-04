@@ -13,6 +13,8 @@ public class Blocker extends Component
     private GreenfootImage image2;
     private GreenfootImage image3;
     private GreenfootImage image4;
+    private GreenfootImage image5;
+    private GreenfootImage image6;
     private Actor collided;
     private boolean collision;
     private Actor collidedVehicle;
@@ -21,15 +23,20 @@ public class Blocker extends Component
     public Blocker()
     {
        
-       image1 = new GreenfootImage("ironman.png");
-       image2 = new GreenfootImage("panther.png");
-       image3 = new GreenfootImage("rabbit.png");
-       image4 = new GreenfootImage("vision.png");
+       image1 = new GreenfootImage("groot.png");
+       image2 = new GreenfootImage("hulk.png");
+       image3 = new GreenfootImage("ironman.png");
+       image4 = new GreenfootImage("panther.png");
+       image5 = new GreenfootImage("thor.png");
+       image6 = new GreenfootImage("vision.png");   
        
        image1.scale(90,90);  
        image2.scale(90,90);  
        image3.scale(90,90);
        image4.scale(90,90);
+       image5.scale(90,90);
+       image6.scale(90,90);
+       
        randomImage();
      //  setRotation(90);
     }
@@ -67,22 +74,30 @@ public class Blocker extends Component
     
     public void randomImage()
     {
-       if (Greenfoot.getRandomNumber(5) > 3 && Greenfoot.getRandomNumber(5) <= 4)
+       if (Greenfoot.getRandomNumber(15) > 11 && Greenfoot.getRandomNumber(15) <= 14)
        {
           setImage(image1);
        }
        
-       else if(Greenfoot.getRandomNumber(5) > 2 && Greenfoot.getRandomNumber(5) <= 3) 
+       else if(Greenfoot.getRandomNumber(15) > 9 && Greenfoot.getRandomNumber(15) <= 11) 
        {
            setImage(image2);
        }
-       else if(Greenfoot.getRandomNumber(5) > 1 && Greenfoot.getRandomNumber(5) <= 2) 
+       else if(Greenfoot.getRandomNumber(15) > 6 && Greenfoot.getRandomNumber(15) <= 9) 
        {
            setImage(image3);           
        }
+       else if(Greenfoot.getRandomNumber(15) > 4 && Greenfoot.getRandomNumber(15) <= 6) 
+       {
+           setImage(image4);           
+       }
+       else if(Greenfoot.getRandomNumber(15) > 2 && Greenfoot.getRandomNumber(15) <= 4) 
+       {
+           setImage(image5);           
+       }
        else
        {
-          setImage(image4);
+          setImage(image6);
        }
    }
     public void check()
