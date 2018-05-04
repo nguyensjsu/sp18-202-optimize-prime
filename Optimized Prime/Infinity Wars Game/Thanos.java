@@ -66,6 +66,7 @@ public class Thanos extends Actor
     {
       
        AmmoFactory ammoFactory= new AmmoFactory();       
+       int currentScore = 0;
           if(counter == 0)
           {
              if (Greenfoot.isKeyDown("x"))
@@ -76,9 +77,18 @@ public class Thanos extends Actor
              }
               if (Greenfoot.isKeyDown("space"))
              {
-                Ammunation bullet = ammoFactory.getAmmunition("Laser");
-                getWorld().addObject(bullet,getWorld().getWidth()/2,getY()-80);
-                counter = 50;
+                 ArrayList<ConcreteSubject> listOfSubs = (ArrayList<ConcreteSubject>)(((MyWorld)getWorld()).getObjects(ConcreteSubject.class));
+                 if(listOfSubs.size()>0){
+                   subject = listOfSubs.get(0);
+                   currentScore = subject.getScore();
+                 }
+                 if(currentScore >= 100)
+                 {
+                    Ammunation bullet = ammoFactory.getAmmunition("Laser");
+                    getWorld().addObject(bullet,getWorld().getWidth()/2,getY()-80);
+                    counter = 50;
+                    subject.setScore(-100);
+                 }
              }
              
              

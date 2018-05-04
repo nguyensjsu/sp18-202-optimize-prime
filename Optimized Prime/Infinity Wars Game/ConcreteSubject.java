@@ -26,7 +26,7 @@ public class ConcreteSubject extends Actor
     }
     
     public void setScore(int addScore){
-        ((MyWorld) getWorld()).addScore(10);
+        ((MyWorld) getWorld()).addScore(addScore);
         notifyObservers();
     }
     
