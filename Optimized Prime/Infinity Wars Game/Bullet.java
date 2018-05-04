@@ -24,6 +24,14 @@ public class Bullet extends Ammunation
    
     public void act() 
     {
+       Actor blocker = getOneObjectAtOffset(0, 0, Blocker.class);
+        if(this != null && blocker != null)
+        {
+            ((MyWorld)getWorld()).removeObject(blocker);
+            ((MyWorld)getWorld()).removeObject(this);
+            return;
+        }
+   
        moveUp();
        check();
     }    
