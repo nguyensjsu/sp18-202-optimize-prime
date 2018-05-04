@@ -27,10 +27,13 @@ public class Thanos extends Actor
     public void act() 
     {
         // Add your action code here.
-        keymove();
-        createBomb();
-        checkCollision();
-        click();
+        if(((MyWorld) getWorld()).getState().toString() == "OnGoingGame")
+       {        
+            keymove();
+            createBomb();
+            checkCollision();
+            click();
+        }
         /*
         Actor coin = getOneObjectAtOffset(0, 0, Coin.class);
         if(coin != null)
