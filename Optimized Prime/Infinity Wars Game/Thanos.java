@@ -65,7 +65,7 @@ public class Thanos extends Actor
               if (Greenfoot.isKeyDown("space"))
              {
                 Ammunation bullet = ammoFactory.getAmmunition("Laser");
-                getWorld().addObject(bullet,getX(),getY()-80);
+                getWorld().addObject(bullet,getWorld().getWidth()/2,getY()-80);
                 counter = 50;
              }
              

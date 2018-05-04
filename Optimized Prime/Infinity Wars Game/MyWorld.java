@@ -45,7 +45,7 @@ public class MyWorld extends World
                 
            subject = new ConcreteSubject();
             addObject(new StartScreen(),400,300);
-        addObject(subject, 400, 400);
+        addObject(subject, 0, 0);
            
         
         addObject(new Thanos(),400,550);
