@@ -8,6 +8,13 @@ import java.util.*;
  */
 public class Thanos extends Actor
 {
+    public Thanos()
+    {
+        GreenfootImage image=getImage();
+        image.scale(90,90);
+     
+    }
+    
     /**
      * Act - do whatever the Thanos wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -69,7 +76,7 @@ public class Thanos extends Actor
               if (Greenfoot.isKeyDown("space"))
              {
                 Ammunation bullet = ammoFactory.getAmmunition("Laser");
-                getWorld().addObject(bullet,getX(),getY()-80);
+                getWorld().addObject(bullet,getWorld().getWidth()/2,getY()-80);
                 counter = 50;
              }
              

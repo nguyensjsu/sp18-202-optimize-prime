@@ -17,7 +17,7 @@ public class Laser extends Ammunation
     public Laser()
     {
         GreenfootImage image=getImage();
-        image.scale(800,5);
+        image.scale(1000,5);
      
     }
    
@@ -31,9 +31,11 @@ public class Laser extends Ammunation
         if(this != null && blocker != null)
         {
             ((MyWorld)getWorld()).removeObject(blocker);
-            ((MyWorld)getWorld()).removeObject(this);
             return;
         }
+        
+        
+         
        moveUp();
        check();
     }    
