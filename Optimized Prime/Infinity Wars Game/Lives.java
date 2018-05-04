@@ -22,7 +22,32 @@ public class Lives extends Actor
     }
     public void decLives()
     {
-       if(getX() == 150)
+       if(getX() == 300)
+       {
+          if(valueLives == 5)
+          {
+             getWorld().removeObject(this);
+          }
+       }
+       
+       
+       else if(getX() == 250)
+       {
+          if(valueLives == 4)
+          {
+             getWorld().removeObject(this);
+          }
+        }
+        
+       else if(getX() == 200)
+       {
+          if(valueLives == 3)
+          {
+             getWorld().removeObject(this);
+          }
+        }
+        
+        else if(getX() == 150)
        {
           if(valueLives == 2)
           {

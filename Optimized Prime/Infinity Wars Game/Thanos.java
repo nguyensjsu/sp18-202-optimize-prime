@@ -22,6 +22,7 @@ public class Thanos extends Actor
     private int counter = 0;
     private Actor collidedVehicle;
     private Actor collidedCoin;
+    private Actor collidedGems;
     private ConcreteSubject subject;
     public void act() 
     {
@@ -134,6 +135,20 @@ public class Thanos extends Actor
   
               // ((CarWorld) getWorld()).addScore(10);
               // Greenfoot.playSound("Coin.mp3");
+            }
+        }
+           if(this.isTouching(Gems.class)){
+            ArrayList<Gems> allLife = (ArrayList<Gems>)getObjectsAtOffset(5, 5, Gems.class);
+            if(allLife.size()>0)
+                collidedGems = allLife.get(0);
+            else
+                collidedGems = null;
+                
+            if(collidedGems != null)
+            {
+               getWorld().removeObject(collidedGems);
+               ((MyWorld) getWorld()).incLives();
+              
             }
         }
     }   

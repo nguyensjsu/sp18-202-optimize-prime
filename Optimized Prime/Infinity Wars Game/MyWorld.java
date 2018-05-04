@@ -74,17 +74,20 @@ public class MyWorld extends World
     public void chanceToBonus()
     {
        Component coin = new Coin();
-       //Component lifeSaver = new LifeSaver();
+       Component gems = new Gems();
       
-       if(fastFlag) {
-             coin.setFasterFlag();
-         //    lifeSaver.setFasterFlag();
-       }
-       
+    
         if(Greenfoot.getRandomNumber(50)<1)
        {
           addObject(coin,170+Greenfoot.getRandomNumber(500), 0);
           component.addChild(coin);
+       }
+       
+       
+        if((Greenfoot.getRandomNumber(50)==3) && (!fastFlag))
+       {
+          addObject(gems, 170+Greenfoot.getRandomNumber(500), 0);
+          component.addChild(gems);
        }
      
    
@@ -160,6 +163,13 @@ public class MyWorld extends World
           component.addChild(vehicle);
        }
     
+    }
+    public void incLives()
+    {
+     
+        lives++;
+  
+        
     }
     
 }
