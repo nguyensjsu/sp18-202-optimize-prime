@@ -50,12 +50,12 @@ public class Thanos extends Actor
         }
          else if(Greenfoot.isKeyDown("up")){
         
-            this.setLocation(getX(),getY()-8);
+            this.setLocation(getX(),getY()-6);
            
         }
         else if(Greenfoot.isKeyDown("down")){
            
-            this.setLocation(getX(),getY()+8);
+            this.setLocation(getX(),getY()+6);
         
     }
     

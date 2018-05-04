@@ -12,6 +12,7 @@ public class Bullet extends Ammunation
    private GreenfootImage image1;
     private GreenfootImage image2;
     private Actor collidedVehicle;
+    private ConcreteSubject subject;
 
 
     public Bullet()
@@ -27,6 +28,11 @@ public class Bullet extends Ammunation
        Actor blocker = getOneObjectAtOffset(0, 0, Blocker.class);
         if(this != null && blocker != null)
         {
+            ArrayList<ConcreteSubject> listOfSubs = (ArrayList<ConcreteSubject>)(((MyWorld)getWorld()).getObjects(ConcreteSubject.class));
+               if(listOfSubs.size()>0){
+                   subject = listOfSubs.get(0);
+                   subject.setScore(20);
+                }
             ((MyWorld)getWorld()).removeObject(blocker);
             ((MyWorld)getWorld()).removeObject(this);
             return;
