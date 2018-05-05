@@ -2,7 +2,7 @@
 
 #### Weekly Scrum Report
 
-##### Optimize Prime, Sprint #1
+#### Optimize Prime, Sprint #1
 
 ##### Team Member Name:
 Ameya Nawale
@@ -44,9 +44,6 @@ Suhas Hunsimar
 ##### What blockers do I have:
 * Need to find different websites to find the characters, attack and story
 
-#### XP Core Values
-For this sprint we need to explore ideas and get everyones input. We also decided what tasks should be assigned to which person for that we first analyzed  everyones strength and interest . Thus we mainly focused on “Communication” as XP Core value.
-
 ##### Team Member Name:
 Saket Relan
 
@@ -60,7 +57,11 @@ Saket Relan
 ##### What blockers do I have:
 * Need to find ways to update the github for the dashboard and flows
 
-##### Optimize Prime, Sprint #2
+##### XP Core Value:
+For this sprint we need to explore ideas and get everyones input. We also decided what tasks should be assigned to which person for that we first analyzed  everyones strength and interest . Thus we mainly focused on “Communication” as XP Core value.
+
+
+#### Optimize Prime, Sprint #2
 
 ##### Team Member Name:
 Ameya Nawale
@@ -107,9 +108,6 @@ Suhas Hunsimar
 ##### What blockers do I have:
 * Need to learn the state pattern in depth and also what states needs to be managed
 
-#### XP Core Values
-We wanted  to build a game that has all the design pattern implemented . Thus fo this sprint we focussed on “Simplicity” aspect so that it will be easier to code. We included all the basic functionality that a good game should have.
-
 ##### Team Member Name:
 Saket Relan
 
@@ -124,7 +122,11 @@ Saket Relan
 ##### What blockers do I have:
 * Need to understand the game flow to figure out the pattern
 
-##### Optimize Prime, Sprint #3
+##### XP Core Value
+We wanted  to build a game that has all the design pattern implemented . Thus fo this sprint we focussed on “Simplicity” aspect so that it will be easier to code. We included all the basic functionality that a good game should have.
+
+
+#### Optimize Prime, Sprint #3
 
 ##### Team Member Name:
 Ameya Nawale
@@ -172,9 +174,6 @@ Suhas Hunsimar
 ##### What blockers do I have:
 * Require the mouse click function to work so as to pause and unpause the game
 
-#### XP Core Values
-For this sprint we already have a basic working game. So for enhancing each component we assigned parts to each member. We gave everyone time play with their part of the code and come up with unique features(Eg, Laser). For this we have focused on “Courage” so that we can develop  out of box functionality.
-
 ##### Team Member Name:
 Saket Relan
 
@@ -191,7 +190,11 @@ Saket Relan
 * Need the game flow for the initial code to introduce coins and blockers
 * Need speed booster delegation understanding for the child elements of composite
 
-##### Optimize Prime, Sprint #4
+##### XP Core Value
+For this sprint we already have a basic working game. So for enhancing each component we assigned parts to each member. We gave everyone time play with their part of the code and come up with unique features(Eg, Laser). For this we have focused on “Courage” so that we can develop  out of box functionality.
+
+
+#### Optimize Prime, Sprint #4
 
 ##### Team Member Name:
 Ameya Nawale
@@ -208,7 +211,6 @@ Bug fixes in the project
 Require few features working such as different actors inclusion in the World
 
 ##### Team Member Name:
-
 Rohit Maheshwari
 
 ##### What I did since the last weekly scrum:
@@ -219,7 +221,6 @@ Start Testing with my components and maintain burndown chart
 
 ##### What blockers do I have:
 Need to check if other members have completed the other patterns. 
-
 
 ##### Team Member Name:
 Suhas Hunsimar
@@ -235,10 +236,6 @@ Suhas Hunsimar
 ##### What blockers do I have:
 * Require the collision to detect the blockers, and moving objects which will simplify game over feature
 
-#### XP Core Values
-For this part once the game is almost ready we again took everyones feedback and redesigned our components so that overall game look more appealing.
-Thus we focused on “Feedback” value.
-
 ##### Team Member Name:
 Saket Relan
 
@@ -251,3 +248,7 @@ Saket Relan
 
 ##### What blockers do I have:
 * No blockers
+
+##### XP Core Value
+For this part once the game is almost ready we again took everyones feedback and redesigned our components so that overall game look more appealing.
+Thus we focused on “Feedback” value.
