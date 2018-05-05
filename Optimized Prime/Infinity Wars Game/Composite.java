@@ -4,8 +4,7 @@ import java.util.*;
 /**
  * Write a description of class Composite here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saket Relan
  */
 public class Composite extends Component
 {

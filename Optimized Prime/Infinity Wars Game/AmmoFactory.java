@@ -3,8 +3,7 @@ import greenfoot.*;
 /**
  * Write a description of class AmmoFactory here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Suhas Hunsimar
  */
 public class AmmoFactory extends Actor
 {

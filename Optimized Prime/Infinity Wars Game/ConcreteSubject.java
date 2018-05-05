@@ -3,8 +3,7 @@ import java.util.*;
 /**
  * Write a description of class ConcreteSubject here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ameya Nawale
  */
 public class ConcreteSubject extends Actor
 {

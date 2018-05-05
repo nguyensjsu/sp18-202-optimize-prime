@@ -3,8 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Lives here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Suhas Hunsimar
  */
 public class Lives extends Actor
 {
@@ -16,7 +15,7 @@ public class Lives extends Actor
     
      public Lives() {
         GreenfootImage image = getImage();
-        image.scale(40, 40);
+        image.scale(30, 40);
 
     }
   

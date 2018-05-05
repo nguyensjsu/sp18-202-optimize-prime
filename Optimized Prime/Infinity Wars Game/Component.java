@@ -3,8 +3,7 @@ import java.util.*;
 /**
  * Write a description of class Component here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saket Relan
  */
 public abstract class Component extends Actor
 {    

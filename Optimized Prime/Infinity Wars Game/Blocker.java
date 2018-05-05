@@ -2,10 +2,9 @@ import greenfoot.*;
 import java.util.*;
 
 /**
- * Write a description of class Vehicle here.
+ * Write a description of class Blocker here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saket Relan
  */
 public class Blocker extends Component
 {

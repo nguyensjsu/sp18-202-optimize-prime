@@ -1,12 +1,10 @@
-
 import greenfoot.*;
 import java.util.*;
 
 /**
  * Write a description of class Coin here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saket Relan
  */
 public class Coin extends Component
 {
@@ -16,15 +14,12 @@ public class Coin extends Component
      * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    
-    public Coin(){
-       
+    public Coin()
+    {
      GreenfootImage image=getImage();
         image.scale(40,40);  
-        
-        
-   }
+    }
+    
    public void act() 
     {
         

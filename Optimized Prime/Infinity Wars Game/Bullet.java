@@ -4,8 +4,7 @@ import java.util.*;
 /**
  * Write a description of class Bullet here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Suhas Hunsimar
  */
 public class Bullet extends Ammunation
 {
@@ -55,11 +54,6 @@ public class Bullet extends Ammunation
          
           if(collidedVehicle != null)
           {
-            
-                  
-                
-               
-            // ((CarWorld) getWorld()).addScore(50);
              getWorld().removeObject(collidedVehicle);
           }
         

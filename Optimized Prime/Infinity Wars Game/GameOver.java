@@ -3,22 +3,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class GameOver here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Rohit Maheshwari
  */
 public class GameOver extends GameState
 {
-     /**
-     * Act - do whatever the GameOverState wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
+       public void act()  {}
+    
+    public GameOver(MyWorld myWorld) {
+        super(myWorld);
     }
-    public void handle()
-    {
-        System.out.println("Player is in pause state");
-         ((MyWorld)getWorld()).setState(this);
+    
+    @Override
+    public void doGameOver() {
+        my_world.setState(this);
     }
 }
