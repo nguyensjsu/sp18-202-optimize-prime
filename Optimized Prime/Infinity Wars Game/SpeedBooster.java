@@ -10,7 +10,7 @@ public class SpeedBooster extends Actor
 {
     public SpeedBooster(){
         GreenfootImage image=getImage();
-        image.scale(40,40);  
+        image.scale(30,30);  
     }
     
     public void act() 

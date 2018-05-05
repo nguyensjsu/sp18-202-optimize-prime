@@ -75,17 +75,17 @@ public class MyWorld extends World {
           
        }
 
-        if (Greenfoot.getRandomNumber(50) < 1) {
+        if (Greenfoot.getRandomNumber(100) < 1) {
             addObject(coin, 170 + Greenfoot.getRandomNumber(500), 0);
             component.addChild(coin);
         }
 
 
-        if ((Greenfoot.getRandomNumber(50) == 3) && (!fastFlag)) {
+        if ((Greenfoot.getRandomNumber(200) == 3) ) {
             addObject(gems, 170 + Greenfoot.getRandomNumber(500), 0);
             component.addChild(gems);
         }
-        if((Greenfoot.getRandomNumber(50)<1) && (!fastFlag))
+        if((Greenfoot.getRandomNumber(150)<1) && (!fastFlag))
        {
           addObject(new SpeedBooster(), 170+Greenfoot.getRandomNumber(500), 0);
        }
