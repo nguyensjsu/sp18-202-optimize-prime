@@ -13,6 +13,12 @@ public class Lives extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public static int valueLives;
+    
+     public Lives() {
+        GreenfootImage image = getImage();
+        image.scale(40, 40);
+
+    }
   
     public void act()
     {

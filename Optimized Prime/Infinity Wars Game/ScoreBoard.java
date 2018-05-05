@@ -8,14 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ScoreBoard extends Actor
 {
-    public static final float FONT_SIZE = 48.0f;
+    public static final float FONT_SIZE = 24.0f;
     public static final int WIDTH = 400;
     public static final int HEIGHT = 300;
     
    
     public ScoreBoard(int score, int lives)
     {
-       makeImage("Game Over", "Score: ", "Lives: ", score, lives);
+        if(lives==6)
+        makeImage("Thanos Won!!!", "Score: ", "Infinity Stones: ", score, lives);
+        else
+         makeImage("Game Over", "Score: ", "Infinity Stones: ", score, lives);
     }
 
     /**
@@ -34,7 +37,7 @@ public class ScoreBoard extends Actor
         image.setFont(font);
         image.setColor(Color.WHITE);
         image.drawString(title, 60, 100);
-        image.drawString(prefix1 + score, 60, 200);
+        image.drawString(prefix1 + score, 60, 175);
         image.drawString(prefix2 + lives, 60, 250);
         setImage(image);
     }

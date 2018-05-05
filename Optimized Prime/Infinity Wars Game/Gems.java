@@ -14,7 +14,7 @@ public class Gems extends Component
    public Gems(){
        
      GreenfootImage image=getImage();
-        image.scale(50,50);  
+        image.scale(40,40);  
         
         
    }

@@ -16,6 +16,15 @@ public class Coin extends Component
      * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    
+    public Coin(){
+       
+     GreenfootImage image=getImage();
+        image.scale(40,40);  
+        
+        
+   }
    public void act() 
     {
         
