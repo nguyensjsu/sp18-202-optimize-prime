@@ -31,6 +31,18 @@ Planning to make sample game in greenfoot
 Need to understand how greenfoot works
 
 
+##### Team Member Name:
+Suhas Hunsimar
+
+##### What I did since the last weekly scrum:
+* Planning of the project game idea and the story
+
+##### What I plan to do in this week:
+* Understand the game flow from the users perspective
+* Get the information of the different characters to be used
+
+##### What blockers do I have:
+* Need to find different websites to find the characters, attack and story
 
 #### XP Core Values
 For this sprint we need to explore ideas and get everyones input. We also decided what tasks should be assigned to which person for that we first analyzed  everyones strength and interest . Thus we mainly focused on “Communication” as XP Core value.
@@ -67,6 +79,21 @@ Start applying UML Patterns
 ##### What blockers do I have:
 Need to learn UML Patterns and where all it can be used in our game
 
+
+##### Team Member Name:
+Suhas Hunsimar
+
+##### What I did since the last weekly scrum:
+* Understood the game flow from the users perspective
+* Understood the greenfoot platform and the flow
+* Retrived the information needed to be used inside the game platform
+
+##### What I plan to do in this week:
+* Understand the sample code for the initial start
+* Identify state pattern implementation into the project
+
+##### What blockers do I have:
+* Need to learn the state pattern in depth and also what states needs to be managed
 
 #### XP Core Values
 We wanted  to build a game that has all the design pattern implemented . Thus fo this sprint we focussed on “Simplicity” aspect so that it will be easier to code. We included all the basic functionality that a good game should have.
@@ -106,6 +133,20 @@ Completed State Pattern to store game state as "ongoing","paused","game over"& "
 Need to figure out how to save game state and that should be accessible to all Actors
 
 
+##### Team Member Name:
+Suhas Hunsimar
+
+##### What I did since the last weekly scrum:
+* Understood the sample code for the initial start
+* Identified state pattern implementation for the project
+
+##### What I plan to do in this week:
+* Implement the State pattern in the project
+* Manage the project board
+* Improve wireframes for the project as the story line
+
+##### What blockers do I have:
+* Require the mouse click function to work so as to pause and unpause the game
 
 #### XP Core Values
 For this sprint we already have a basic working game. So for enhancing each component we assigned parts to each member. We gave everyone time play with their part of the code and come up with unique features(Eg, Laser). For this we have focused on “Courage” so that we can develop  out of box functionality.
@@ -140,6 +181,20 @@ Start Testing with my components and maintain burndown chart
 ##### What blockers do I have:
 Need to check if other members have completed the other patterns. 
 
+
+##### Team Member Name:
+Suhas Hunsimar
+
+##### What I did since the last weekly scrum:
+* Implemented the State pattern in the project
+* Managed the project board
+* Improved wireframes for the project as the story line
+
+##### What I plan to do in this week:
+* Fix the bugs for the moving objects, blockers (avengers), and game over feature
+
+##### What blockers do I have:
+* Require the collision to detect the blockers, and moving objects which will simplify game over feature
 
 #### XP Core Values
 For this part once the game is almost ready we again took everyones feedback and redesigned our components so that overall game look more appealing.
