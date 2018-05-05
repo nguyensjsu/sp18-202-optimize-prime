@@ -99,7 +99,7 @@ Rohit Maheshwari
 Started with Composite State Pattern for Background, Blockers, Gems, Coins classes
 
 ##### What I plan to do in this week:
-Completed State Pattern to store game state as â€œongoingâ€,â€pausedâ€,â€game overâ€ state 
+Completed State Pattern to store game state as "ongoing","paused","game over"& "state" 
 
 
 ##### What blockers do I have:
