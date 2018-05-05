@@ -14,7 +14,7 @@ Planning of the project implementation and understanding the requirements
 * Explore different game options for the project
 * Understand different gaming platforms and decide on one platform to move ahead with
 
-###### What blockers do I have:
+##### What blockers do I have:
 Need to find good reference materials and documentation for the project development
 
 
@@ -33,7 +33,7 @@ Ameya Nawale
 * Identified the project requirements
 * Created tasks for everyone to develop on the project
 
-###### What blockers do I have:
+##### What blockers do I have:
 No blockers
 
 ##### Optimize Prime, Sprint #3
@@ -51,7 +51,7 @@ Ameya Nawale
 * Organise the project board
 * Create wireframes for the project
 
-###### What blockers do I have:
+##### What blockers do I have:
 Require the basic flow working of the project to implement the Observer design pattern
 
 
@@ -68,7 +68,7 @@ Ameya Nawale
 ##### What I plan to do in this week:
 Bug fixes in the project
 
-###### What blockers do I have:
+##### What blockers do I have:
 Require few features working such as different actors inclusion in the World
 
 
