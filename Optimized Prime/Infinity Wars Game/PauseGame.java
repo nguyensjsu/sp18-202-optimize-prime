@@ -21,7 +21,5 @@ public class PauseGame extends GameState
         System.out.println("Player is in pause state");
          ((MyWorld)getWorld()).setState(this);
     }
-    public String toString(){
-       return "PauseGame";
-    }
+
 }

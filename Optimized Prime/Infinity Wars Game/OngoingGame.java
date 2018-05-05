@@ -21,7 +21,4 @@ public class OngoingGame extends GameState
         System.out.println("Player is in ongoing state");
         ((MyWorld)getWorld()).setState(this);
     }
-    public String toString(){
-       return "OnGoingGame";
-    }
 }
