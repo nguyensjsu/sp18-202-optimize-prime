@@ -3,22 +3,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class OngoingGame here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Rohit Maheshwari
  */
 public class OngoingGame extends GameState
 {
-     /**
-     * Act - do whatever the OnGoingGame wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
-   public void handle()
-    {
-        System.out.println("Player is in ongoing state");
-        ((MyWorld)getWorld()).setState(this);
+    
+    public OngoingGame(MyWorld myWorld) {
+
+        super(myWorld);
+
+    }
+    @Override
+       public void doGameOver() {
+                   my_world.setState(my_world.getGameOverState());
+        }
+    
+    @Override
+    public void doPause() {
+        my_world.setState(my_world.getPauseState());
     }
 }

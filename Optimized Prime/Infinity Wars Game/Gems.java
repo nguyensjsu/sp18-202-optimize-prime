@@ -4,8 +4,7 @@ import java.util.*;
 /**
  * Write a description of class Gems here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saket Relan
  */
 public class Gems extends Component
 {
@@ -14,7 +13,7 @@ public class Gems extends Component
    public Gems(){
        
      GreenfootImage image=getImage();
-        image.scale(40,40);  
+        image.scale(30,40);  
         
         
    }

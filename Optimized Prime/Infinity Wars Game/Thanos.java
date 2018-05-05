@@ -3,8 +3,9 @@ import java.util.*;
 /**
  * Write a description of class Thanos here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Rohit Maheshwari
+ * @author Suhas Hunsimar
+ * @author Ameya Nawale
  */
 public class Thanos extends Actor {
     public Thanos() {
@@ -140,8 +141,7 @@ public class Thanos extends Actor {
     public void click() {
         if (Greenfoot.mouseClicked(null)) {
             if (((MyWorld) getWorld()).getState() instanceof OngoingGame) {
-                //((CarWorld) getWorld()).pauseGame(true);
-                ((MyWorld) getWorld()).setState(((MyWorld) getWorld()).getPauseState());
+                ((MyWorld) getWorld()).doPause();
                 getWorld().addObject(new Information(), 400, 300);
             }
         }

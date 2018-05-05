@@ -3,8 +3,7 @@ import java.util.*;
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Rohit Maheshwari
  */
 public class MyWorld extends World {
     private boolean fastFlag = false;
@@ -33,33 +32,25 @@ public class MyWorld extends World {
         lives = 1;
         laser = 2;
         speed = 48;
-        //pause = false;
-        og = new OngoingGame();
-        pg = new PauseGame();
-        go = new GameOver();
+        
+        og = new OngoingGame(this);
+        pg = new PauseGame(this);
+        go = new GameOver(this);
 
         st = og;
         component = new Composite();
 
         subject = new ConcreteSubject();
+        
         addObject(new StartScreen(), 400, 300);
         addObject(subject, 0, 0);
-
-
         addObject(new Thanos(), 400, 550);
 
         Score score = new Score("Power: ");
         subject.attach(score);
+        
         addObject(score, 85, 580);
-
-
         addObject(new Lives(), 50, 50);
-
-
-
-
-
-
         Component vehicle = new Blocker();
 
     }
@@ -136,26 +127,18 @@ public class MyWorld extends World {
     public void collided() {
 
         lives--;
-
-
         List remove = getObjects(Lives.class);
 
         removeObject((Actor) remove.get(remove.size() - 1));
         if (lives == 0) {
               Greenfoot.stop();
               this.addObject(new ScoreBoard(this.getScore(),this.getLives()),400,300);            
-            st = go;
+            this.doGameOver();
             return;
         }
-
-
-
     }
     public void chanceToVehicle() {
         Component vehicle = new Blocker();
-
-
-
         if (Greenfoot.getRandomNumber(50) < 1) {
             addObject(vehicle, 175 + Greenfoot.getRandomNumber(500), 0);
             component.addChild(vehicle);
@@ -170,10 +153,20 @@ public class MyWorld extends World {
         if (lives == 6) {
               Greenfoot.stop();
               this.addObject(new ScoreBoard(this.getScore(),this.getLives()),400,300);            
-            st = go;
+            this.doGameOver();
             return;
         }
 
+    }
+    
+   public void doOngoingGame() {
+       this.st.doOngoingGame();
+   }
+   public void doPause() {
+       this.st.doPause(); 
+   }
+   public void doGameOver() {
+       this.st.doGameOver();
     }
 
 }

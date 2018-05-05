@@ -2,6 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 import java.util.*;
 
+/**
+ * Write a description of class Observer here.
+ * 
+ * @author Ameya Nawale
+ */
 public class Score extends Observer
 {
    public static int value = 0;

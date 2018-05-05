@@ -1,11 +1,11 @@
-#Epic stories:
+##### Epic stories:
 1.	As an actor (Thanos) in the game, I want to collect all 6 infinity stones.
 2.	As a player in the game, I want to help the Thanos to navigate through the obstacles and collect all gems
 3.	As avengers(obstracle) in the game, I will prevent Black Panther to go further as I don’t want him to reach destination.
 4.	As a developer of the game, I need to develop a simple and understandable game, so that the player can play the game well.
 
 
-#User Stories
+##### User Stories
 
 1.	As a Thanos(player) in the game, I want to know number of infinity stones I have collected
 2.	As a Thanos(player) in the game, I want to know my power score so that I can know how much I needed to use special power
