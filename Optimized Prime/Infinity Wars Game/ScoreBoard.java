@@ -40,7 +40,7 @@ public class ScoreBoard extends Actor
     }
     public void act()
     {
-        if(((MyWorld) getWorld()).getState().toString() == "GameOverState")
+        if(((MyWorld) getWorld()).getState() instanceof GameOver)
           {
               
               //((MyWorld) getWorld()).setState(((MyWorld) getWorld()).getOngoingState());

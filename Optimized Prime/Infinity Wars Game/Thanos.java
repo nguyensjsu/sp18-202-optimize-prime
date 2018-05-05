@@ -24,7 +24,7 @@ public class Thanos extends Actor {
     private ConcreteSubject subject;
     public void act() {
         // Add your action code here.
-        if (((MyWorld) getWorld()).getState().toString() == "OnGoingGame") {
+        if (((MyWorld) getWorld()).getState() instanceof OngoingGame) {
             keymove();
             createBomb();
             checkCollision();
@@ -139,7 +139,7 @@ public class Thanos extends Actor {
     }
     public void click() {
         if (Greenfoot.mouseClicked(null)) {
-            if (((MyWorld) getWorld()).getState().toString() == "OnGoingGame") {
+            if (((MyWorld) getWorld()).getState() instanceof OngoingGame) {
                 //((CarWorld) getWorld()).pauseGame(true);
                 ((MyWorld) getWorld()).setState(((MyWorld) getWorld()).getPauseState());
                 getWorld().addObject(new Information(), 400, 300);

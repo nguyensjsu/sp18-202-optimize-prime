@@ -22,7 +22,7 @@ public class Information  extends Actor
        //state st = new state();
        if(Greenfoot.mouseClicked(null))
        {
-          if(((MyWorld) getWorld()).getState().toString() == "PauseGame")
+          if(((MyWorld) getWorld()).getState() instanceof PauseGame)
           {
               
               ((MyWorld) getWorld()).setState(((MyWorld) getWorld()).getOngoingState());

@@ -33,7 +33,7 @@ public class Coin extends Component
    
     public void moveDown()
     {
-        if(((MyWorld) getWorld()).getState().toString() == "OnGoingGame")
+        if(((MyWorld) getWorld()).getState() instanceof OngoingGame)
        {
          
              setLocation(getX(), getY()+ 4);
@@ -43,7 +43,7 @@ public class Coin extends Component
     
       public void moveFaster()
     {
-       if(((MyWorld) getWorld()).getState().toString() == "OnGoingGame")
+       if(((MyWorld) getWorld()).getState() instanceof OngoingGame)
        {
           setLocation(getX(), getY()+ 8);
        }

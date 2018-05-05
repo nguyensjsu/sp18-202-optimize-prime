@@ -30,7 +30,7 @@ public class MyWorld extends World {
 
         addObject(new StartScreen(), 400, 300);
 
-        lives = 3;
+        lives = 1;
         laser = 2;
         speed = 48;
         //pause = false;
@@ -54,8 +54,8 @@ public class MyWorld extends World {
 
 
         addObject(new Lives(), 50, 50);
-        addObject(new Lives(), 100, 50);
-        addObject(new Lives(), 150, 50);
+
+
 
 
 
@@ -64,7 +64,7 @@ public class MyWorld extends World {
 
     }
     public void act() {
-        if (st.toString() == "OnGoingGame") {
+        if (st instanceof OngoingGame) {
             chanceToVehicle();
             chanceBackground();
             chanceToBonus();
