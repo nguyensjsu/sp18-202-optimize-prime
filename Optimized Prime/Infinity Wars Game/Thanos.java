@@ -22,6 +22,7 @@ public class Thanos extends Actor {
     private Actor collidedVehicle;
     private Actor collidedCoin;
     private Actor collidedGems;
+    private Actor collidedBooster;
     private ConcreteSubject subject;
     public void act() {
         // Add your action code here.
@@ -102,6 +103,7 @@ public class Thanos extends Actor {
             if (collidedVehicle != null) {
                 getWorld().removeObject(collidedVehicle);
                 ((MyWorld) getWorld()).collided();
+                 ((MyWorld)getWorld()).unsetMoveFastFlag();
                 //Greenfoot.playSound("Explosion.wav");
             }
         }
@@ -137,6 +139,49 @@ public class Thanos extends Actor {
 
             }
         }
+        
+        if(this.isTouching(SpeedBooster.class)){
+                ArrayList<SpeedBooster> boosters = (ArrayList<SpeedBooster>)getObjectsAtOffset(5, 5,SpeedBooster.class);
+               
+                if(boosters.size()>0)
+                    collidedBooster = boosters.get(0);
+                else
+                    collidedBooster = null;
+                    
+               if (collidedBooster != null)
+                {
+            
+                   ((MyWorld)getWorld()).removeObject(collidedBooster);
+                   Component component;
+                   
+                   ArrayList<ConcreteSubject> listOfSubs = (ArrayList<ConcreteSubject>)(((MyWorld)getWorld()).getObjects(ConcreteSubject.class));
+                   if(listOfSubs.size()>0){
+                       subject = listOfSubs.get(0);
+                       subject.setSpeed(40);
+                    }
+                
+                   //((CarWorld)getWorld()).getSubject().setSpeed(40);
+                  // ((CarWorld)getWorld()).addSpeed(40);
+                   component = ((MyWorld)getWorld()).getComponent();
+                  
+                   
+                   try{
+                      //  long start = System.currentTimeMillis( );
+                        ((MyWorld)getWorld()).setMoveFastFlag();
+                        component.setFasterFlag();
+                        
+                      /* if((System.currentTimeMillis( ) - start) == 5000){
+                            ((CarWorld)getWorld()).unsetMoveFastFlag();
+                           
+                            component.unsetFasterFlag();
+                        } */
+                    }catch (Exception e) {
+                            System.out.println("Got an exception!");
+                        }
+            
+                }
+             
+            }
     }
     public void click() {
         if (Greenfoot.mouseClicked(null)) {

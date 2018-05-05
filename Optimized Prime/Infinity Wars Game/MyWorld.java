@@ -12,6 +12,7 @@ public class MyWorld extends World {
     private GameState og;
     private GameState pg;
     private GameState go;
+    private int counter;
     private int lives;
     private int score;
     private int speed;
@@ -62,10 +63,17 @@ public class MyWorld extends World {
         }
 
     }
+    public Component getComponent(){
+       // System.out.println("World component is of size "+ component.getAllChild().size());
+        return component;
+    }
     public void chanceToBonus() {
         Component coin = new Coin();
         Component gems = new Gems();
-
+        if(fastFlag) {
+             coin.setFasterFlag();
+          
+       }
 
         if (Greenfoot.getRandomNumber(50) < 1) {
             addObject(coin, 170 + Greenfoot.getRandomNumber(500), 0);
@@ -77,7 +85,10 @@ public class MyWorld extends World {
             addObject(gems, 170 + Greenfoot.getRandomNumber(500), 0);
             component.addChild(gems);
         }
-
+        if((Greenfoot.getRandomNumber(50)<1) && (!fastFlag))
+       {
+          addObject(new SpeedBooster(), 170+Greenfoot.getRandomNumber(500), 0);
+       }
 
     }
     public void chanceBackground() {
@@ -123,7 +134,15 @@ public class MyWorld extends World {
     public int getLives() {
         return lives;
     }
+ public void setMoveFastFlag(){
+        fastFlag = true;
+        counter = 0;
+    }
 
+    public void unsetMoveFastFlag(){
+        fastFlag = false;
+        counter = 0;
+    }
     public void collided() {
 
         lives--;
@@ -139,6 +158,11 @@ public class MyWorld extends World {
     }
     public void chanceToVehicle() {
         Component vehicle = new Blocker();
+        
+        if(fastFlag) {
+             vehicle.setFasterFlag();
+       }
+       
         if (Greenfoot.getRandomNumber(50) < 1) {
             addObject(vehicle, 175 + Greenfoot.getRandomNumber(500), 0);
             component.addChild(vehicle);

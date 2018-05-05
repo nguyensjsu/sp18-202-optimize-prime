@@ -45,7 +45,7 @@ public class Blocker extends Component
      */
     public void act() 
     {
-        //this.removeTouching(SpeedBooster.class);
+        this.removeTouching(SpeedBooster.class);
         this.removeTouching(Blocker.class);
         if(moveFasterFlag)
             moveFaster();
@@ -101,7 +101,7 @@ public class Blocker extends Component
     public void check()
     {
         
-    // collided = getOneIntersectingObject(Vehicle.class);
+     //collided = getOneIntersectingObject(Vehicle.class);
         if (collided != null || getY()>=(getWorld().getHeight()-1))
         {
            getWorld().removeObject(this);
